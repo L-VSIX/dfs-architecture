@@ -4,7 +4,7 @@
 
 ## Architecture retenue
 
-Deux VM **Windows Server 25**, hébergées sur l'hyperviseur ACE, jouent le rôle de filers répliqués via **DFS Replication**. Le gestionnaire DFS est implanté sur `h-winserv-2`. Cette architecture garantit une haute disponibilité du service de fichiers et une bascule transparente côté client en cas d'indisponibilité de l'un des deux serveurs.
+Deux VM **Windows Server 25**, hébergées sur l'hyperviseur ACE, jouent le rôle de filers répliqués via **DFS Replication**. Le gestionnaire DFS est implanté sur `h-winserv-2`. Cette architecture garantit une haute disponibilité du service de fichiers et une bascule transparente côté client en cas d'indisponibilité de l'un des deux serveurs `a-winserv-2` et `a-winserv-3` .
 
 ## Arborescence de partage
 
@@ -13,6 +13,10 @@ L'arborescence respecte l'organigramme RAID-A-PORTER : chaque service métier di
 ## Mise en production progressive
 
 La mise en production a démarré par le service **Direction Générale**, permettant de vérifier le bon fonctionnement de la réplication DFS et de la résolution des chemins UNC (`\\raidaporter.local\<service>`) avant généralisation aux autres services.
+
+## Aperçu
+
+<img width="1746" height="1004" alt="dfs" src="https://github.com/user-attachments/assets/e065a534-2eae-4360-9ffc-d1c506933fbe" />
 
 ## Pourquoi DFS plutôt qu'un filer unique
 
