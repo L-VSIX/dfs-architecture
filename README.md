@@ -24,9 +24,9 @@ Un filer unique constitue un point de défaillance unique (SPOF). La réplicatio
 
 ## Repos liés
 
-- `ad-structuration-annuaire` — source des groupes de sécurité
-- `dfs-habilitations-powershell` — automatisation des ACL
-- `cups-scan-to-folder` — consommateur de cette arborescence
+- [`ad-structuration-annuaire`](https://github.com/L-VSIX/ad-structuration-annuaire) — source des groupes de sécurité
+- [`dfs-habilitations-powershell`](https://github.com/L-VSIX/dfs-habilitations-powershell) — automatisation des ACL
+- [`cups-scan-to-folder`](https://github.com/L-VSIX/cups-scan-to-folder) — consommateur de cette arborescence
 
 ## Auteur
 
